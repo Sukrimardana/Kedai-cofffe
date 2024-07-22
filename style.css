@@ -1,0 +1,427 @@
+body {
+    font-size: 15pt;
+    background-image: url('top-view-cup-coffee-along-with-pastry-cake-delicious-cookies-grey-desk-sweet-bake-pastry-sugar-cake.jpg');
+    background-size: 100% auto;
+    font-size: 15px;
+    color: black;
+    font-family: sans-serif;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+.nav1 img {
+  width: 70px;
+  height: 50px;
+  
+}
+.nav1 {
+  top: 0;
+  left: -1px;
+  display: flex;
+overflow-x: auto;
+white-space: nowrap;
+background-color: #333;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+}
+.nav1 a {
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav1 a:hover {
+  background: blue;
+  font-weight: bold;
+}
+
+p {
+  font-size: auto;
+  font-weight: bold;
+}
+
+.judul {
+  padding-top: 50px;
+  display: block;
+}
+.judul h1 {
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 0 0 20px black;
+}
+
+.float1 {
+  padding: 50px;
+}
+
+main {
+  background-color: rgba(79, 80, 96, 0.55);
+  text-align: center;
+  padding: 20px;
+}
+
+article {
+  overflow: auto;
+  max-width: 1200px;
+  display: grid;
+  margin: auto;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+  gap: 20px;
+  padding: 0;
+}
+.box {
+  background: linear-gradient(to right, #54566C, #73747D);
+  padding: 50px;
+  width: 200px;
+  font-size: 15px;
+  display: inline-block;
+  color: white;
+}
+.box img {
+  width: 200px;
+  height: 150px;
+}
+
+.box a{
+  text-decoration: none;
+  color: white;
+}
+.info ul {
+  padding: 50px;
+}
+.ul-23 {
+  border-left: 10px solid black;
+}
+
+.card {
+  overflow: visible;
+  padding: 20px;
+  width: 300px;
+  height: 254px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front, .back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.back-content img {
+  width: 100px;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title p {
+  width: 50%;
+}
+
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.card-center {
+  float: left;
+}
+  
+.ul-5 {
+  padding: 50px;
+}
+
+
+
+     .card1 {
+            display: none;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .close-btn1 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+       
+  .card2 {
+     display: none;
+ width: 300px;
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 10px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ position: relative;
+  }
+ .close-btn2 {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background: none;
+   border: none;
+   font-size: 20px;
+   cursor: pointer;
+ }
+   
+    .card3 {
+   display: none;
+   width: 300px;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   position: relative;
+ }
+
+ .close-btn3 {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background: none;
+   border: none;
+   font-size: 20px;
+   cursor: pointer;
+ }
+ 
+.Kontak-box {
+  padding: 30px;
+  float: none;
+}
+
+.input45 {
+  float: right;
+  margin: 5px;
+  border-radius: 10px;
+  background: #151617C2;
+  padding: 40px;
+  outline: blue;
+  width:200px;
+}
+
+.input45 input {
+  display: block;
+  background: #2D94BAC2;
+  padding: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px;
+}
+
+.input45 textarea {
+  margin: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 24px;
+  background: #2D94BAC2;
+}
+.input45 button {
+  background-color: #2D94BAC2;
+  width: 150px;
+  height: 50px;
+  margin-left: 14%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.input45 button:hover {
+  box-shadow: 0 0 20px rgba(54, 66, 203, 0.85)
+  , 0 0 20px rgba(39, 253, 32, 1);
+  color: #E9EEE8;
+  animation: text11 1s infinite linear;
+}
+@keyframes text11 {
+  from {
+    background: #22C71C3D;
+    color: #055AFF59;
+  }
+  to {
+    background: #055AFF59;
+  }
+}
+
+.hubungi {
+  padding: none;
+  background: #3B3B42E8;
+  display: flex;
+}
+.hubungi .ul11 {
+  height: 200px;
+  padding: 5px;
+ 
+}
+.hubungi p {
+  font-size: 15px;
+}
+.hubungi p:hover {
+  font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+  .input45 {
+    float: none;
+  }
+}
+.copy {
+  color: whitesmoke;
+}
+.copy p {
+  text-shadow: 0 0 30px #202023;
+}
+
